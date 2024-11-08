@@ -36,7 +36,7 @@ const Signup = async(req,res) =>  {
 }
 
 const Signin = async(req,res) => {
-    const {username,password} = req.headers;
+    const {username,password} = req.body;
     const user= await User.findOne({username , password});
 
     if(user) {
@@ -48,8 +48,9 @@ const Signin = async(req,res) => {
      }
 }
 
-app.post('/signup', Signup)
+app.post('/signup', Signup);
 app.post("/signin", Signin);
+
 
 function started() {
     console.log(`Example app listening on port ${port}`);
