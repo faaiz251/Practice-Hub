@@ -3,7 +3,8 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser'
 import jwt from 'jsonwebtoken'
-import User from './db/index.js'
+import {User, Problem} from './db/index.js'
+import authenticateJwt from './middleware/middleware.js';
 
 const app = express();
 
@@ -48,8 +49,20 @@ const Signin = async(req,res) => {
      }
 }
 
+const problems = async(req, res) => {
+    Problem.find().then((problems)=>{
+        if(problems.length !== 0)
+        res.status(200).json(problems);
+    else{
+        res.send("No Content found!!");
+    }
+    })
+}
+
+
 app.post('/signup', Signup);
 app.post("/signin", Signin);
+app.get("/content", authenticateJwt , problems);
 
 
 function started() {
