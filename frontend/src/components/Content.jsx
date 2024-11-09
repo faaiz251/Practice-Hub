@@ -1,14 +1,10 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { Button, Typography } from "@mui/material";
-import { useState,useEffect } from 'react'
-import axios from 'axios';
-import './content.css';
-
-
+import { Link,useNavigate } from "react-router-dom";
+import { Button, responsiveFontSizes, Typography } from "@mui/material";
 export function Content() {
     return ( 
         <div>
             <Navbar></Navbar>
+            <br/>
             <Problems></Problems>
         </div>
     )
@@ -51,49 +47,73 @@ function Navbar() {
 
 }
 function Problems(){
-    const [problems,setProblems]=useState([])
-    useEffect(()=>{
-        fetchProblems()
-    },[])
-    const fetchProblems = async()=>{
-        const options={
-            method:'GET',
-            url:'https://localhost:3000/content',
-            headers:{
-                'Content-Type':'application/json',
-                authorization:localStorage.getItem('token')
-            }
-        }
-        const response=await axios.request(options)
-        setProblems(response.data)
-    }
-    
     return(
         <div>
-        <table>
-            <thead>
-                <th>Title</th>
-                <th>Difficulty</th>
-            </thead>
-            <tbody>
-            {problems.map((problem) => (
-    <Child key={problem._id} _id={problem._id} title={problem.title} difficulty={problem.difficulty} />))}
-            </tbody>
-        </table>
+            <div style = {{
+                display: "flex",
+            }}>
+            <Typography variant="h5" style={{ marginTop: '20px', marginLeft: "200px", fontWeight: "bold",  color: "white" }}>
+               Title
+            </Typography>
+            <Typography variant="h5" style={{ marginTop: '20px', marginLeft: "550px",fontWeight: "bold",  color: "white" }}>
+               Description
+            </Typography>
+            </div>
+            <div style = {{
+                marginLeft: "200px",
+                marginTop: "40px"
+            }}>
+                
+                <Link 
+                href="/content1"
+                style={{
+                    color: "white",
+                fontSize: "25px"
+                }}>Two Sum</Link>
+
+                <br/>
+                <br/>
+                <br/>
+
+                <Link 
+                href="/content2"
+                style={{
+                color: 'white',
+                fontSize: "25px"
+                }}>Longest Substring Without repeating characters</Link>
+
+                <br/>
+                <br/>
+                <br/>
+                <Link 
+                href="/content3"
+                style={{
+                color: 'white',
+                "&:hover" : {
+                    color: "blue"
+                },
+                fontSize: "25px"
+                }}>Regular Expression Matching</Link>
+            </div>
+
+            <div style= {{
+                marginLeft: "830px",
+                marginTop: "-160px",
+                justifyContent: "center"
+            }}>
+                 <Typography variant="h5" style={{ color: "green" }}>
+              Easy
+            </Typography>
+                 <Typography variant="h5" style={{ marginTop: "35px",color: "yellow" }}>
+              Medium
+            </Typography>
+                 <Typography variant="h5" style={{ marginTop: "35px" ,color: "red" }}>
+             Hard
+            </Typography>
+            </div>
+
         </div>
     )
 
 }
-function Child(props) {
-    const id = "/content/" +props._id;
-    return (
-        <tr>
-            <td>
-                <a href={id}>{props.title}</a>
-            </td>
-            <td style={{ color: props.difficulty === 'Easy' ? "green" : (props.difficulty === 'Medium' ? "yellow" : "red") }}>
-                {props.difficulty}
-            </td>
-        </tr>
-    );
-}
+
