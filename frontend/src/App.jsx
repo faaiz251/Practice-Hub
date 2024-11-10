@@ -3,6 +3,9 @@ import {Home} from './components/Home';
 import {Signup} from './components/Signup';
 import {Signin} from './components/Signin';
 import {Content} from './components/Content';
+import {Content1} from './components/Content1';
+import {Content2}  from './components/Content2';
+import {Content3} from './components/Content3';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/content" element={<Content />} />
+          <Route path="/content1" element={<Content1 />} />
+          <Route path="/content2" element={<Content2 />} />
+          <Route path="/content3" element={<Content3 />} />
         </Routes>
       </Router>
     </div>

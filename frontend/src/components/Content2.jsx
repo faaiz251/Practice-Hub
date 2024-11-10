@@ -1,7 +1,7 @@
 import { Navbar } from "./Navbar";
 import { Typography , Button} from "@mui/material";
 
-export function Content1() {
+export function Content2() {
     return ( 
         
         <div style = {{
@@ -9,12 +9,12 @@ export function Content1() {
             overflow: "auto"
         }}>
             <Navbar></Navbar>
-            <Problem1></Problem1>
+            <Problem2></Problem2>
         </div>
     )
 }
 
-function Problem1() {
+function Problem2() {
     return (
         <div>
             <div class="problem-description" style = {{
@@ -23,29 +23,27 @@ function Problem1() {
                 marginLeft: "30px"
             }}>
 <Typography variant="h5" style={{display: "flex", marginTop: '20px', fontWeight: "bold",  color: "white" , textDecoration: "underline"}}>
-                             <strong>Two Sum</strong></Typography>
-    <p>Given an array of integers nums and an integer target, return indices of the two numbers </p> 
-    <p>such that they add up to target.You may assume that each input would have exactly one</p>
-    <p>solution, You may assume that each input would have exactly one solution, and you may </p>
-    <p>not use the same element twice.You can return the answer in any order.</p>
+                             <strong>Longest Substring Without repeating characters</strong></Typography>
+    <p>Given a string s, find the length of the longest substring without repeating characters.</p> 
     <h3>Example 1:</h3>
-    <p>Input: nums = [2,7,11,15], target = 9<br/>Output: [0, 1]</p>
-    <p></p>Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+    <p>Input: s = "abcabcbb"<br/>Output: 3</p>
+    <p>Explanation: The answer is "abc", with the length of 3.</p>
     <h3>Example 2:</h3>
-    <p>Input: nums = [3,2,4], target = 6<br/>
-    Output: [1,2]</p>
+    <p>Input: s = "bbbbb"<br/>
+    Output: 1</p>
+    <p>Explanation: The answer is "b", with the length of 1.</p>
     <h3>Example 3:</h3>
-    <p>Input: nums = [3,3], target = 6<br/>
-    Output: [0,1]</p>
+    <p>Input: s = "pwwkew"<br/>
+    Output: 3</p>
     <p>
-Only one valid answer exists.<br/>
-Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?</p>
+    Explanation: The answer is "wke", with the length of 3.</p>
+    <p>Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.</p>
   </div>
   
   <div className='testcase' style = {{
     color:"white"
   }}>
-    <Typography variant="h5" style={{display: "flex", marginTop: '-555px', marginLeft: "650px",fontWeight: "bold",  color: "white" , textDecoration: "underline"}}>
+    <Typography variant="h5" style={{display: "flex", marginTop: '-502px', marginLeft: "650px",fontWeight: "bold",  color: "white" , textDecoration: "underline"}}>
     <strong>Code Editor (Java)</strong></Typography>
     <textarea placeholder="Write your Java code here..." style = {{
         marginLeft: "650px",
