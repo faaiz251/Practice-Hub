@@ -1,4 +1,4 @@
-import { Navbar } from "./Navbar";
+import { Navbar } from "../common/Navbar";
 import { Typography , Button} from "@mui/material";
 
 export function Content2() {

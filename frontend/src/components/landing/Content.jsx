@@ -1,5 +1,5 @@
 import {Typography , Button } from "@mui/material";
-import {Navbar} from './Navbar';
+import {Navbar} from '../common/Navbar';
 import { useNavigate } from "react-router-dom";
 export function Content() {
     return ( 

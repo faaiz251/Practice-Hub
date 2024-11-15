@@ -1,7 +1,7 @@
-import { Navbar } from "./Navbar";
+import { Navbar } from "../common/Navbar";
 import { Typography , Button} from "@mui/material";
 
-export function Content1() {
+export function Content3() {
     return ( 
         
         <div style = {{
@@ -9,12 +9,12 @@ export function Content1() {
             overflow: "auto"
         }}>
             <Navbar></Navbar>
-            <Problem1></Problem1>
+            <Problem3></Problem3>
         </div>
     )
 }
 
-function Problem1() {
+function Problem3() {
     return (
         <div>
             <div class="problem-description" style = {{
@@ -23,29 +23,30 @@ function Problem1() {
                 marginLeft: "30px"
             }}>
 <Typography variant="h5" style={{display: "flex", marginTop: '20px', fontWeight: "bold",  color: "white" , textDecoration: "underline"}}>
-                             <strong>Two Sum</strong></Typography>
-    <p>Given an array of integers nums and an integer target, return indices of the two numbers </p> 
-    <p>such that they add up to target.You may assume that each input would have exactly one</p>
-    <p>solution, You may assume that each input would have exactly one solution, and you may </p>
-    <p>not use the same element twice.You can return the answer in any order.</p>
+                             <strong>Regular Expression Matching</strong></Typography>
+    <p>Given an input string s and a pattern p, implement regular expression </p> <p>matching with support for '.' and '*' where:</p>
+
+<p>'.' Matches any single character.​​​​</p>
+<p>'*' Matches zero or more of the preceding element.</p>
+<p>The matching should cover the entire input string (not partial).</p>
     <h3>Example 1:</h3>
-    <p>Input: nums = [2,7,11,15], target = 9<br/>Output: [0, 1]</p>
-    <p></p>Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+    <p>Input: s = "aa", p = "a"<br/>Output: false</p>
+    <p>Explanation: "a" does not match the entire string "aa".</p>
     <h3>Example 2:</h3>
-    <p>Input: nums = [3,2,4], target = 6<br/>
-    Output: [1,2]</p>
+    <p>Input: s = "aa", p = "a*"<br/>
+    Output: true</p>
+    <p>Explanation: '*' means zero or more of the preceding element, 'a'. </p><p>Therefore, by repeating 'a' once, it becomes "aa".</p>
     <h3>Example 3:</h3>
-    <p>Input: nums = [3,3], target = 6<br/>
-    Output: [0,1]</p>
+    <p>Input: s = "ab", p = ".*"<br/>
+    Output: true</p>
     <p>
-Only one valid answer exists.<br/>
-Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?</p>
+    Explanation: ".*" means "zero or more (*) of any character (.)".</p>
   </div>
   
   <div className='testcase' style = {{
     color:"white"
   }}>
-    <Typography variant="h5" style={{display: "flex", marginTop: '-555px', marginLeft: "650px",fontWeight: "bold",  color: "white" , textDecoration: "underline"}}>
+    <Typography variant="h5" style={{display: "flex", marginTop: '-642px', marginLeft: "650px",fontWeight: "bold",  color: "white" , textDecoration: "underline"}}>
     <strong>Code Editor (Java)</strong></Typography>
     <textarea placeholder="Write your Java code here..." style = {{
         marginLeft: "650px",

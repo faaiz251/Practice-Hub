@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {Home} from './components/Home';
-import {Signup} from './components/Signup';
-import {Signin} from './components/Signin';
-import {Content} from './components/Content';
-import {Content1} from './components/Content1';
-import {Content2}  from './components/Content2';
-import {Content3} from './components/Content3';
+import {Home} from './components/landing/Home';
+import {Signup} from './components/authorization/Signup';
+import {Signin} from './components/authorization/Signin';
+import {Content} from './components/landing/Content';
+import {Content1} from './components/landing/Content1';
+import {Content2}  from './components/landing/Content2';
+import {Content3} from './components/landing/Content3';
 
 function App() {
   return (
