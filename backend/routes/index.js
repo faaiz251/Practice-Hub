@@ -3,8 +3,8 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser'
 import jwt from 'jsonwebtoken'
-import {User, Problem} from './db/mongo.js'
-import authenticateJwt from './middleware/middleware.js';
+import {User, Problem} from '../db/mongo.js'
+import authenticateJwt from '../middleware/middleware.js';
 
 const app = express();
 
