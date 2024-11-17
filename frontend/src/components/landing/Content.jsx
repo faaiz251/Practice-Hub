@@ -17,21 +17,87 @@ function Problems(){
         <div>
             <div style = {{
                 display: "flex",
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '550px',
+
             }}>
-            <Typography variant="h5" style={{ marginTop: '20px', marginLeft: "200px", fontWeight: "bold",  color: "white" }}>
+            
+            <Typography variant="h5" style={{ textDecoration: 'underline', fontWeight: "bold",  color: "white" }}>
                Title
             </Typography>
-            <Typography variant="h5" style={{ marginTop: '20px', marginLeft: "550px",fontWeight: "bold",  color: "white" }}>
+            <Typography variant="h5" style={{textDecoration: 'underline',fontWeight: "bold",  color: "white" }}>
                Description
             </Typography>
             </div>
             <div style = {{
-                marginLeft: "195px",
-                marginTop: "40px"
+               marginTop: '50px',
+               display: 'flex',
+               justifyContent: 'center',
+                alignItems: 'center',
+                gap: '550px',
+                marginLeft: '-100px',
+                marginRight: '-50px'
             }}>
-        
+          <Button variant="text" style = {{
+                    color: 'White',
+                    fontSize: "20px"
+                }}
+                    onClick={async () => {
+                        navigate('/content1');
+                        }
+                    }
+                >Two Sum</Button>
+                 <Typography variant="h5" style={{color: "green" }}>
+              Easy
+            </Typography>
+        </div>
+            <div style = {{
+               marginTop: '50px',
+               display: 'flex',
+               justifyContent: 'space-between',
+                marginLeft: '60px',
+                marginRight: '280px'
+            }}>
+          <Button variant="text" style = {{
+                    color: 'White',
+                    fontSize: "20px"
+                }}
+                    onClick={async () => {
+                        navigate('/content2');
+                        }
+                    }
+                >Longest Substring Without repeating characters</Button>
+                 <Typography variant="h5" style={{color: "yellow" }}>
+              Medium
+            </Typography>
+        </div>
+            <div style = {{
+               marginTop: '50px',
+               display: 'flex',
+               justifyContent: 'center',
+                alignItems: 'center',
+                gap: '400px',
+                marginLeft: '-40px',
+                marginRight: '110px'
+            }}>
+          <Button variant="text" style = {{
+                    color: 'White',
+                    fontSize: "20px"
+                }}
+                    onClick={async () => {
+                        navigate('/content3');
+                        }
+                    }
+                >Regular Expression Matching</Button>
+                 <Typography variant="h5" style={{color: "red" }}>
+              Hard
+            </Typography>
+        </div>
+        </div>
+    ) }
 
-                <Button variant="text" style = {{
+                {/* <Button variant="text" style = {{
                     color: 'white',
                     fontSize: "15px"
                 }}
@@ -44,8 +110,6 @@ function Problems(){
                 <br/>
                 <br/>
                 <br/>
-
-              
                    <Button variant="text" style = {{
                     color: 'white',
                     fontSize: "15px"
@@ -63,9 +127,6 @@ function Problems(){
     <Button variant="text" style = {{
                     color: 'white',
                     fontSize: "15px",
-                    "&:hover" : {
-                        color: "blue"
-                    },
                 }}
                     onClick={async () => {
                         navigate('/content3');
@@ -78,16 +139,16 @@ function Problems(){
 
             <div style= {{
                 marginLeft: "830px",
-                marginTop: "-182px",
+                marginTop: "-205px",
                 justifyContent: "center"
             }}>
-                 <Typography variant="h5" style={{marginTop :"-1px", color: "green" }}>
+            <Typography variant="h5" style={{marginTop :"-1px", color: "green" }}>
               Easy
             </Typography>
-                 <Typography variant="h5" style={{ marginTop: "40px",color: "yellow" }}>
+                 <Typography variant="h5" style={{ marginTop: "55px",color: "yellow" }}>
               Medium
             </Typography>
-                 <Typography variant="h5" style={{ marginTop: "40px" ,color: "red" }}>
+                 <Typography variant="h5" style={{ marginTop: "45px" ,color: "red" }}>
              Hard
             </Typography>
             </div>
@@ -95,5 +156,5 @@ function Problems(){
         </div>
     )
 
-}
+} */}
 

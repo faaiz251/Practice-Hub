@@ -6,20 +6,40 @@ export function Navbar() {
     return (
         <div>
             <div style = {{
-                display : "flex",
-                justifyContent: "space-between",
-                margin: "20px"
+                display: 'flex',
+                flexDirection: 'column',
+                color: '#fff',
+                fontFamily: 'Arial, sans-serif'
             }}> 
-            <Button variant="text" style = {{
-                    color: 'white',
-                    marginTop: "20px",
-                    fontSize: "20px"
-                }}
-                    onClick={async () => {
-                        navigate('/content');
-                        }
-                    }
-                ><strong>Practice Hub</strong></Button>
+            <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '50px 100px',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{
+              fontWeight: 'bold',
+              fontSize: '26px',
+              marginRight: '10px',
+              color: '#f9a825',
+              cursor: 'pointer',
+            }} onClick={() => {
+              navigate('/content');
+            }} >
+              Practice
+            </div>
+            <div style={{
+              fontSize: '15px',
+              color: '#000',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+            }} onClick={() => {
+              navigate('/content');
+            }}>
+              Hub
+            </div>
+          </div>
                
             <Button
                 variant="contained"
@@ -28,9 +48,7 @@ export function Navbar() {
                     backgroundColor: '#4dabf5',
                     width: 100,
                     color: 'white',
-                    padding: '9px',
-                    borderRadius: '5px',
-                    marginTop: "20px"
+                    padding: '10px',
                 }}
                 onClick={async () => {
                     localStorage.removeItem('token');
@@ -40,6 +58,7 @@ export function Navbar() {
             >Log Out</Button>
             </div>
     
+        </div>
         </div>
 
     )

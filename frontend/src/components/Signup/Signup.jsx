@@ -9,24 +9,44 @@ export function Signup() {
     const[password , setPassword] = useState("");
 
     return (
+        <div style = {{
+            backgroundColor: 'white',
+            fontFamily: 'cursive',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}>
         <Card
-            sx={{
+            style={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                backgroundColor: '#000000',
-                padding: '30px',
                 borderRadius: '10px',
-                width: '300px',
-                margin: '450px',
-                marginTop: "100px",
+                width: '370px',
+                justifyContent: 'center',
                 color: 'white',
-                border: '1px solid white',
-            }}
-        >
-            <Typography variant="h5" style={{ marginBottom: '20px' }}>
-                Signup
-            </Typography>
+                height: '100vh',
+                border: '5px solid white',
+            }}>
+                <div style = {{
+                 marginTop: '-60px',
+                
+                }}>
+                <img 
+                src='https://leetcode.com/favicon-96x96.png'
+                alt='Practice-Hub'
+                style = {{display: 'flex', marginLeft: 'auto', marginRight: 'auto',}}
+                />
+   
+            <Typography onClick={() => {
+                navigate('/');
+            }}variant="h5" style={{color: 'black', fontFamily: 'cursive', cursor: 'pointer',}}>
+                Practice Hub </Typography>
+                </div>
+                <div style ={{
+                    marginTop: '100px',
+                    marginBottom: '0px'
+                }}>
             <TextField
             onChange={(e) => {
                 setUsername(e.target.value);
@@ -53,8 +73,10 @@ export function Signup() {
                     borderRadius: '5px',
                     marginBottom: '20px',
                 }}
-               
+                
             />
+            </div>
+
             <Button
                 variant="contained"
                 fullWidth
@@ -63,8 +85,9 @@ export function Signup() {
                     color: 'white',
                     padding: '10px',
                     borderRadius: '5px',
+                    width: '50%',
                     fontWeight: 'bold',
-                    marginBottom: '20px',
+                   
                 }}
                 onClick={async () => {
                     try {
@@ -89,12 +112,13 @@ export function Signup() {
             >
                 Signup
             </Button>
-            <Typography variant="h7" style={{ color: 'white' }}>
+            <Typography variant="h7" style={{ color: 'black' , marginTop: '20px' }}>
                 Already a User?{' '}
                 <Link to="/signin" style={{ color: '#4dabf5' }}>
                     Signin
                 </Link>
             </Typography>
         </Card>
+        </div>
     )
 }

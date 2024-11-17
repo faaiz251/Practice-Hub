@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {Home} from './components/landing/Home';
-import {Signup} from './components/authorization/Signup';
-import {Signin} from './components/authorization/Signin';
+import {Signup} from './components/Signup/Signup';
+import {Signin} from './components/Signin/Signin';
 import {Content} from './components/landing/Content';
 import {Content1} from './components/landing/Content1';
 import {Content2}  from './components/landing/Content2';
 import {Content3} from './components/landing/Content3';
+import { MainNav } from './components/common/MainNav';
 
-function App() {
+
+export function App() {
   return (
     <div style={{
       position: "fixed",
@@ -15,15 +17,16 @@ function App() {
       left: 0,
       width: "100vw",
       height: "100vh",
+      fontFamily: "cursive",
       margin: 0,
       padding: 0,
-      backgroundColor: "#000000", 
-     
+      background: 'linear-gradient(135deg, #2d2d2d, #1a1a1a)',
       overflow: "hidden"
       }}>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/mainNav" element={<MainNav />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/content" element={<Content />} />
@@ -35,5 +38,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
