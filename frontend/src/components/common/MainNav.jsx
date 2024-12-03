@@ -2,11 +2,12 @@ import React from "react";
 import credit from "../assets/logo.png";
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import '../../App.css';
 
 export function MainNav() {
   const navigate = useNavigate();
   return (
-    <div
+    <div class ='container'
       style={{
         display: "flex",
         flexDirection: "column",

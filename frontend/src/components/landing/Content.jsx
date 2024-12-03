@@ -1,6 +1,8 @@
 import { Typography, Button } from "@mui/material";
 import { Navbar } from "../common/Navbar";
 import { useNavigate } from "react-router-dom";
+import '../../App.css';
+
 export function Content() {
   return (
     <div>
@@ -14,7 +16,7 @@ export function Content() {
 function Problems() {
   const navigate = useNavigate();
   return (
-    <div>
+    <div  class ='container'>
       <div
         style={{
           display: "flex",
@@ -108,6 +110,7 @@ function Problems() {
           gap: "400px",
           marginLeft: "-40px",
           marginRight: "110px",
+          flexWrap: "wrap",
         }}
       >
         <Button

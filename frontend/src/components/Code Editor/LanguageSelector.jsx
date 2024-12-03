@@ -8,8 +8,8 @@ const ACTIVE_COLOR = "#42a5f5";
 const LanguageSelector = ({ language, onSelect }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleOpen = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleOpen = (e) => {
+    setAnchorEl(e.currentTarget);
   };
 
   const handleClose = () => {

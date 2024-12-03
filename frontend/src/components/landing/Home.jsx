@@ -33,7 +33,7 @@ export function Home() {
             alignItems: "center",
           }}
         >
-          <div
+          <div class='image'
             style={{
               background: "white",
               marginLeft: "50px",
@@ -52,7 +52,8 @@ export function Home() {
                 justifyContent: "space-around",
               }}
             >
-              <div style={{ display: "flex", gap: "5px", padding: "10px" }}>
+              <div class='inner-div'
+               style={{ display: "flex", gap: "5px", padding: "10px" }}>
                 <div
                   style={{
                     backgroundColor: "#4fc3f7",

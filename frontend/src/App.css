@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  div {
+    text-align: center !important;
+    padding: 5px;
+    font-size: x-small;
+  }
+}
+
+
+

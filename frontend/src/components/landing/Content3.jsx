@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar } from "../common/Navbar";
 import { Typography } from "@mui/material";
 import { Code1 } from "../Code Editor/Code1";
+import '../../App.css';
+
 
 export function Content3() {
   return (
@@ -14,7 +16,7 @@ export function Content3() {
 
 function Problem3() {
   return (
-    <div>
+    <div class ='container'>
       <div
         style={{
           display: "flex",

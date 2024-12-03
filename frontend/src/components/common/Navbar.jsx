@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
+import '../../App.css';
 
 export function Navbar() {
   const navigate = useNavigate();
   return (
-    <div>
+    <div class ='container'>
       <div
         style={{
           display: "flex",
