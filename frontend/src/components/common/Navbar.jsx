@@ -1,12 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
-import '../../App.css';
 
 export function Navbar() {
   const navigate = useNavigate();
   return (
-    <div class ='container'>
-      <div
+    <div>
+      <div className="header"
         style={{
           display: "flex",
           flexDirection: "column",

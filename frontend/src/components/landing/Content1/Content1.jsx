@@ -1,14 +1,16 @@
 import React from "react";
-import { Navbar } from "../common/Navbar";
+import { Navbar } from "../../common/Navbar";
 import { Typography } from "@mui/material";
-import { Code1 } from "../Code Editor/Code1";
-import '../../App.css';
+import { Code1 } from "../../Code Editor/Code1";
+import './Content1.css'
 
 
 export function Content1() {
   return (
     <div style={{ height: "100%", overflow: "auto" }}>
+      <div className="header">
       <Navbar />
+      </div>
       <Problem1 />
     </div>
   );
@@ -16,7 +18,7 @@ export function Content1() {
 
 function Problem1() {
   return (
-    <div class ='container'> 
+    <div> 
       <div
         style={{
           display: "flex",
@@ -67,7 +69,9 @@ function Problem1() {
           </p>
         </div>
       </div>
+      <div className="coder">
       <Code1></Code1>
+      </div>
     </div>
   );
 }

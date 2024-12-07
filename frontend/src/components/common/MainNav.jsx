@@ -7,12 +7,13 @@ import '../../App.css';
 export function MainNav() {
   const navigate = useNavigate();
   return (
-    <div class ='container'
+    <div
       style={{
         display: "flex",
         flexDirection: "column",
         color: "#fff",
         fontFamily: "Arial, sans-serif",
+        padding: '50 100px'
       }}
     >
       <div
@@ -20,10 +21,11 @@ export function MainNav() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "50px 100px",
+          padding: "70px 150px",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div className='main-header'
+        style={{ display: "flex", alignItems: "center" }}>
           <div
             style={{
               fontWeight: "bold",
@@ -46,7 +48,7 @@ export function MainNav() {
             Hub
           </div>
         </div>
-        <div
+        <div className="header2"
           style={{
             display: "flex",
             gap: "100px",

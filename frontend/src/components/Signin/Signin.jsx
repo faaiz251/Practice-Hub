@@ -10,7 +10,7 @@ export function Signin() {
   const [password, setPassword] = useState("");
 
   return (
-    <div class = 'container'
+    <div
       style={{
         backgroundColor: "white",
         fontFamily: "cursive",

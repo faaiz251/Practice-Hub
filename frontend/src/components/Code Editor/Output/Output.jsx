@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Button, Typography, CircularProgress } from "@mui/material";
-import { executeCode } from "../../../../backend/Code Compiler API/api";
+import { executeCode } from "../../../../../backend/Code Compiler API/api";
 
 const Output = ({ editorRef, language }) => {
   const [output, setOutput] = useState(null);
@@ -24,7 +24,7 @@ const Output = ({ editorRef, language }) => {
   };
 
   return (
-    <Box sx={{ width: "50%" }}>
+    <Box sx={{ width: "50%", col }}>
       <Typography
         variant="h6"
         gutterBottom

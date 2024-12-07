@@ -1,8 +1,7 @@
 import React from "react";
-import { Navbar } from "../common/Navbar";
+import { Navbar } from "../../common/Navbar";
 import { Typography } from "@mui/material";
-import { Code1 } from "../Code Editor/Code1";
-import '../../App.css';
+import { Code1 } from "../../Code Editor/Code1";
 
 export function Content2() {
   return (
@@ -15,7 +14,7 @@ export function Content2() {
 
 function Problem2() {
   return (
-    <div class ='container'>
+    <div>
       <div
         style={{
           display: "flex",

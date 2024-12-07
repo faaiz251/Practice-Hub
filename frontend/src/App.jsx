@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./components/landing/Home";
+import { Home } from "./components/landing/Home/Home";
 import { Signup } from "./components/Signup/Signup";
 import { Signin } from "./components/Signin/Signin";
-import { Content } from "./components/landing/Content";
-import { Content1 } from "./components/landing/Content1";
-import { Content2 } from "./components/landing/Content2";
-import { Content3 } from "./components/landing/Content3";
+import { Content } from "./components/landing/Contents/Content";
+import { Content1 } from "./components/landing/Content1/Content1";
+import { Content2 } from "./components/landing/Content2/Content2";
+import { Content3 } from "./components/landing/Content3/Content3";
 
 export function App() {
   return (

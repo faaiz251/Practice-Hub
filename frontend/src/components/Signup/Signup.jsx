@@ -11,7 +11,7 @@ export function Signup() {
   const [password, setPassword] = useState("");
 
   return (
-    <div class ='container'
+    <div
       style={{
         backgroundColor: "white",
         fontFamily: "cursive",
