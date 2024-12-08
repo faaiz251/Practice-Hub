@@ -59,7 +59,6 @@ import { Editor } from "@monaco-editor/react";
 import LanguageSelector from "../LanguageSelector";
 import { CODE_SNIPPETS } from "../../../constants";
 import Output from "../Output/Output";
-import './CodeEditor1.css';
 
 export function CodeEditor() {
   const editorRef = useRef();
@@ -86,17 +85,17 @@ export function CodeEditor() {
               minimap: { enabled: false },
             }}
             height="75vh"
+            width='40vw'
             theme="vs-dark"
             language={language}
-            defaultValue={CODE_SNIPPETS[language]}
             onMount={onMount}
             value={value}
             onChange={(value) => setValue(value)}
           />
         </Box>
-        <Box className="output-box">
+        <div className="output">
           <Output editorRef={editorRef} language={language} />
-        </Box>
+          </div>
       </Stack>
     </Box>
   );

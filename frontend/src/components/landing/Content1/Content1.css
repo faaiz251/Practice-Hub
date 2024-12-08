@@ -1,4 +1,4 @@
-/* General styles for CodeEditor and Output components */
+
 .editor-container {
     padding: 16px;
   }
@@ -6,22 +6,12 @@
   .language-selector {
     margin-bottom: 16px;
   }
-  
+
   .editor-box {
     width: 50%;
-    height: 75vh;
   }
   
-  .output-box {
-    width: 50%;
-    padding: 16px;
-    height: 75vh;
-    background-color: #1e1e1e;
-    color: white;
-    overflow-y: auto;
-  }
   
-  /* Responsive styles */
   @media (max-width: 1024px) {
     .editor-container {
       padding: 8px;
@@ -34,38 +24,37 @@
     .editor-box {
       height: 65vh;
     }
-  
-    .output-box {
-      height: 65vh;
-    }
+
+   
   }
+
+  @media (max-width: 900px) {
+    .output-box {
+      margin-top: 170px;
+    }
+   
+  }
+
+  
   
   @media (max-width: 768px) {
-    .editor-container {
-      padding: 4px;
-    }
-  
-    .language-selector {
-      margin-bottom: 8px;
-    }
-  
     .editor-box {
-      height: 55vh;
+      margin-bottom: 10px;
+
     }
-  
+
+    .language-selector {
+      display: flex;
+      justify-content: space-between;
+    }
+   
+
     .output-box {
-      height: 55vh;
+      margin-top: 190px;
     }
-  }
-  
-  @media (max-width: 768px) {
-    .editor-container {
-      flex-direction: column; /* Stack editor and output vertically */
-    }
-  
-    .output-box {
-      width: 100%; /* Full width for output on smaller screens */
-      margin-top: 16px; /* Add space between editor and output */
+    .output {
+      display: flex;
+      justify-content: space-between;
     }
   }
   
@@ -73,17 +62,22 @@
     .editor-container {
       padding: 2px;
     }
+
+    .full-box {
+      border: none;
+    }
   
     .language-selector {
-      margin-bottom: 6px;
-      text-align: center;
+      text-align: left;
     }
   
-    .editor-box {
-      height: 50vh;
+    .output {
+      display: flex;
+      justify-content: space-between;
     }
-  
+   
     .output-box {
+      margin-top: 190px;
       height: 50vh;
     }
   }

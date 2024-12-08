@@ -17,6 +17,7 @@ const LanguageSelector = ({ language, onSelect }) => {
   };
 
   return (
+    <div className="language-selector">
     <Box sx={{ ml: 2, mb: 4 }}>
       <Typography
         variant="h6"
@@ -69,6 +70,7 @@ const LanguageSelector = ({ language, onSelect }) => {
         ))}
       </Menu>
     </Box>
+    </div>
   );
 };
 

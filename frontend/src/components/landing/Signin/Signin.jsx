@@ -2,7 +2,6 @@ import { TextField, Button, Typography, Card } from "@mui/material";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import '../../App.css';
 
 export function Signin() {
   const navigate = useNavigate();

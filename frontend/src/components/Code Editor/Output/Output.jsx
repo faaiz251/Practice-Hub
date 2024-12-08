@@ -24,7 +24,8 @@ const Output = ({ editorRef, language }) => {
   };
 
   return (
-    <Box sx={{ width: "50%", col }}>
+    <div className="output-box">
+      <div className="output">
       <Typography
         variant="h6"
         gutterBottom
@@ -43,7 +44,8 @@ const Output = ({ editorRef, language }) => {
       >
         {isLoading ? <CircularProgress size={24} /> : "Run Code"}
       </Button>
-      <Box
+      </div>
+      <Box 
         sx={{
           height: "75vh",
           width: "40vw",
@@ -51,7 +53,6 @@ const Output = ({ editorRef, language }) => {
           border: 1,
           borderRadius: 1,
           borderColor: isError ? "error.main" : "grey.800",
-          backgroundColor: "#1e1e1e",
           color: isError ? "error.main" : "white",
           overflowY: "auto",
         }}
@@ -63,12 +64,12 @@ const Output = ({ editorRef, language }) => {
             </Typography>
           ))
         ) : (
-          <Typography variant="body2" sx={{ color: "grey.500" }}>
+          <Typography variant="body2" sx={{ color: "gray.500" }}>
             Click "Run Code" to see the output here
           </Typography>
         )}
       </Box>
-    </Box>
+    </div>
   );
 };
 

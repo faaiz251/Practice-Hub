@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/landing/Home/Home";
-import { Signup } from "./components/Signup/Signup";
-import { Signin } from "./components/Signin/Signin";
+import { Signup } from "./components/landing/Signup/Signup";
+import { Signin } from "./components/landing/Signin/Signin";
 import { Content } from "./components/landing/Contents/Content";
 import { Content1 } from "./components/landing/Content1/Content1";
 import { Content2 } from "./components/landing/Content2/Content2";
