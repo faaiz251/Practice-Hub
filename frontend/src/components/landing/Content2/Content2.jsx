@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "../../common/Navbar";
 import { Typography } from "@mui/material";
-import { Code1 } from "../../Code Editor/Code1";
+import { Code1 } from "../../Code Editor/Code1/Code1";
 
 export function Content2() {
   return (

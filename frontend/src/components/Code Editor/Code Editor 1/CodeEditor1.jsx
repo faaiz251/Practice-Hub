@@ -56,7 +56,7 @@
 import React, { useRef, useState } from "react";
 import { Box, Stack } from "@mui/material";
 import { Editor } from "@monaco-editor/react";
-import LanguageSelector from "../LanguageSelector";
+import LanguageSelector from "../Language/LanguageSelector";
 import { CODE_SNIPPETS } from "../../../constants";
 import Output from "../Output/Output";
 

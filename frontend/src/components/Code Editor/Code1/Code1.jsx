@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import { CodeEditor } from "./Code Editor 1/CodeEditor1";
+import { CodeEditor } from "../Code Editor 1/CodeEditor1";
 
 export function Code1() {
   return (

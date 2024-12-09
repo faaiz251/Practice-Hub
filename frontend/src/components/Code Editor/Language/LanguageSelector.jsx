@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
-import { LANGUAGE_VERSIONS } from "../../constants";
+import { LANGUAGE_VERSIONS } from "../../../constants";
 
 const languages = Object.entries(LANGUAGE_VERSIONS);
 const ACTIVE_COLOR = "#42a5f5";
