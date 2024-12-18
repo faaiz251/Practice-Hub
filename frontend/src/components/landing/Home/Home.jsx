@@ -137,7 +137,7 @@
 
 
 import React from "react";
-import { MainNav } from "../../common/MainNav";
+import { MainNav } from "../../common/MainNav/MainNav";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 

@@ -132,7 +132,7 @@
 //   );
 // }
 import { Typography, Button } from "@mui/material";
-import { Navbar } from "../../common/Navbar";
+import { Navbar } from "../../common/NavBar/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./Content.css";
 

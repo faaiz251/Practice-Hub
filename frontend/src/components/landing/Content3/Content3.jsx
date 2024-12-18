@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "../../common/Navbar";
+import { Navbar } from "../../common/NavBar/Navbar";
 import { Typography } from "@mui/material";
 import { Code1 } from "../../Code Editor/Code1/Code1";
 
