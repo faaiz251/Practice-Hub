@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 
 export function Navbar() {
   const navigate = useNavigate();
