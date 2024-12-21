@@ -5,10 +5,12 @@ import bodyParser from "body-parser";
 import jwt from "jsonwebtoken";
 import { User } from "./db/mongo.js";
 import authenticateJwt from "./middleware/middleware.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 
-const port = 3000;
+const port = 3001;
 
 const SECRET = "SECr3t";
 app.use(cors());
@@ -65,8 +67,11 @@ function started() {
 
 app.listen(port, started);
 
-mongoose.connect("mongodb://localhost:27017/", {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   dbName: "practice-hub",
-});
+})
+.then(() => console.log("Connected to MongoDB"))
+.catch((err) => console.error("MongoDB connection error:", err));
+

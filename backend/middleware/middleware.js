@@ -1,17 +1,19 @@
 import jwt from "jsonwebtoken";
+const SECRET = "SECr3t";
 
-export default function authenticateJwt(req, res, next) {
-  const token = req.headers.authorization;
-  console.log(token);
-  if (token) {
-    jwt.verify(token, SECRET, (err, decoded) => {
-      if (err) {
-        res.status(401).send("Something went wrong");
-      } else {
-        next();
-      }
-    });
-  } else {
-    res.send("Unauthorised access!");
+export default function authenticateJwt (req, res, next) {
+  const token = req.headers.authorization?.split(" ")[1];
+  if (!token) {
+    return res.status(401).json({ message: "Token missing or invalid" });
   }
-}
+
+  jwt.verify(token, SECRET, (err, user) => {
+    if (err) {
+      return res.status(403).json({ message: "Invalid token" });
+    }
+    req.user = user;
+    next();
+  });
+};
+
+
