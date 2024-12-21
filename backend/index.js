@@ -57,9 +57,14 @@ const problems = async (req, res) => {
   });
 };
 
+const cronjob = async(req,res)=>{
+  res.status(200).send("Hi to cron job from server")
+}
+
 app.post("/signup", Signup);
 app.post("/signin", Signin);
 app.get("/content", authenticateJwt, problems);
+app.get("/cronjob",cronjob);
 
 function started() {
   console.log(`Example app listening on port ${port}`);
