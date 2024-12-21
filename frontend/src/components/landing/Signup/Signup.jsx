@@ -102,7 +102,7 @@ export function Signup() {
           onClick={async () => {
             try {
               const res = await axios.post(
-                `http://localhost:3000/signup/`,
+                `${import.meta.env.VITE_BACKEND_URL}/signup/`,
                 {
                   username: username,
                   password: password,

@@ -7,7 +7,7 @@ export function Signin() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  
   return (
     <div
       style={{
@@ -100,7 +100,7 @@ export function Signin() {
           onClick={async () => {
             try {
               const res = await axios.post(
-                `http://localhost:3000/signin/`,
+                `${import.meta.env.VITE_BACKEND_URL}/signin/`,
                 {
                   username: username,
                   password: password,
@@ -224,7 +224,7 @@ export function Signin() {
       onClick={async () => {
         try {
           const res = await axios.post(
-            `http://localhost:3000/signup/`,
+            `${import.meta.env.VITE_BACKEND_URL}/signup/`,
             {
               username: username,
               password: password,
