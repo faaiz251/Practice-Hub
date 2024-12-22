@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 
 const Signup = async (req, res) => {
   const { username, password } = req.body;
+  if (!username || !password) {
+    return res.status(400).json({ message: "Username and password are required." });
+  }
   const user = await User.findOne({ username });
 
   if (user) {
