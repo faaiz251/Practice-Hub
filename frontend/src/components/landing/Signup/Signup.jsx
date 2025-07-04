@@ -3,11 +3,12 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
 export function Signup() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  
 
   return (
     <div
@@ -120,7 +121,7 @@ export function Signup() {
             } catch (err) {
               if (err) {
                 alert(
-                  "Username already existed. Please Choose a different username"
+                  "Error from the frontend"
                 );
               }
             }

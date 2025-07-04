@@ -6,6 +6,7 @@ import jwt from "jsonwebtoken";
 import { User } from "./db/mongo.js";
 import authenticateJwt from "./middleware/middleware.js";
 import dotenv from 'dotenv';
+import cron from "node-cron";
 dotenv.config();
 
 const app = express();
@@ -60,14 +61,18 @@ const problems = async (req, res) => {
   });
 };
 
-const cronjob = async(req,res)=>{
-  res.status(200).send("Hi to cron job from server")
-}
+cron.schedule('0 * * * *', () => {
+  console.log('Running cron job at every hour at minute 0!');
+  // Example: call a function to update database, clear cache, etc.
+});
+
+app.get('/', (req, res) => {
+  res.status(200).send("Hi to cron job from server");
+});
 
 app.post("/signup", Signup);
 app.post("/signin", Signin);
 app.get("/content", authenticateJwt, problems);
-app.get("/cronjob",cronjob);
 
 function started() {
   console.log(`Example app listening on port ${port}`);
